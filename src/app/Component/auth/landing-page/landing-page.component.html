@@ -1,0 +1,613 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+  <div style="background-color: aliceblue">
+    <div class="w3-row">
+      <mat-toolbar
+        style="background-color: white; border-bottom: 1px solid gainsboro"
+      >
+        <span
+          style="
+            color: blueviolet;
+
+            margin-left: 100px;
+            font-size: x-large;
+          "
+          >Mirror</span
+        >
+        <button mat-flat-button style="margin-left: 50px">
+          Solutions
+          <span style="font-size: 10px"><i class="bi bi-caret-down"></i></span>
+        </button>
+        <button mat-flat-button style="margin-left: 20px">
+          Plans & Pricing
+        </button>
+        <button mat-flat-button style="margin-left: 20px">Contact Sales</button>
+        <button mat-flat-button style="margin-left: 20px">
+          Resources
+          <span style="font-size: 10px"><i class="bi bi-caret-down"></i></span>
+        </button>
+        <button mat-flat-button style="margin-left: 350px; color: blue">
+          <a routerLink="" style="text-decoration: none">Join</a>
+        </button>
+        <button mat-flat-button style="margin-left: 20px; color: blue">
+          Host
+        </button>
+        <button mat-flat-button style="margin-left: 20px; color: blue">
+          <a routerLink="/login-form" style="text-decoration: none">Sign in</a>
+        </button>
+        <button
+          mat-flat-button
+          style="margin-left: 20px; background-color: orangered; color: white"
+        >
+          <a routerLink="/register-user" style="text-decoration: none"
+            >Sign up, its free</a
+          >
+        </button>
+      </mat-toolbar>
+    </div>
+
+    <!-- Testing for crousal start -->
+
+    <div
+      class="row"
+      style="margin-top: 50px; margin-left: 10px; margin-right: 10px"
+    >
+      <div class="col-md-6">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="w3-card">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  class="d-block w-100"
+                  src="./assets/images/1.png"
+                  alt="First slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="./assets/images/2.png"
+                  alt="Second slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="./assets/images/3.png"
+                  alt="Third slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="./assets/images/4.png"
+                  alt="Fourth slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="./assets/images/5.png"
+                  alt="Fifth slide"
+                />
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div
+            class="w3-card"
+            style="
+              background-color: rgb(238, 240, 242);
+              padding: 30px;
+              padding-bottom: 40px;
+              height: 395px;
+            "
+          >
+            <ol class="carousel-indicators" style="padding-top: 50px">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="3"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="4"
+              ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h1>
+                  Introducing the All-New
+                  <span class="mirror">Mirror</span> Whiteboard
+                </h1>
+                <p>
+                  <span class="mirror">Mirror</span> Whiteboard provides a
+                  collaboration space where individuals, hybrid teams, and
+                  remote teams can come together, brainstorm, and learn.
+                </p>
+              </div>
+              <div class="carousel-item">
+                <h1>
+                  Introducing <span class="mirror">Mirror</span> Contact Center
+                </h1>
+                <p>
+                  <span class="mirror">Mirror</span> Contact Center is an
+                  omnichannel contact center solution that’s optimized for video
+                  and integrated right into the same Mirror experience.
+                </p>
+              </div>
+              <div class="carousel-item">
+                <h1>Design More Engaging Virtual Events</h1>
+                <p>
+                  Elevate your virtual and hybrid events with Backstage, Session
+                  Branding, and Webinar Reactions.
+                </p>
+              </div>
+              <div class="carousel-item">
+                <h1>Introducing <span class="mirror">Mirror</span> IQ!</h1>
+                <p>
+                  A conversational intelligence solution for Meetings that turns
+                  sales conversations into actionable insights.
+                </p>
+              </div>
+              <div class="carousel-item">
+                <h1>Enabling the Hybrid Workforce</h1>
+                <p>
+                  Explore how the <span class="mirror">Mirror</span> platform
+                  seamlessly brings together remote and in-person teams, for
+                  work that goes wherever you do.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testing for crousal end -->
+
+    <div class="row" style="margin-top: 100px">
+      <div class="col-6">
+        <div
+          class="w3-card w3-circle"
+          style="width: 80%; margin-left: 10%; background-color: white"
+        >
+          <h2>Mirror For You</h2>
+          <span><hr /></span>
+          <p class="para2">
+            <span class="mirror">Mirror</span> is for you. We're here to help
+            you connect, communicate, and express your ideas so you can get more
+            done together. We're proud to be trusted by millions of enterprises,
+            small businesses, and individuals, just like you.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <span>
+          <img
+            src=".\assets\images\mirror.png"
+            style="width: 60%; margin-left: 10%"
+          />
+        </span>
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <div class="heading">What we Provide</div>
+      <hr style="margin-left: 8%; width: 25%" />
+    </div>
+
+    <div class="row" style="background-color: aliceblue">
+      <div
+        class="col-4"
+        style="margin-left: 10%; padding-top: 20px; width: 80%"
+      >
+        <ul>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforvirtualbackground()"
+              >Virtual Background</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforcrossplatform()"
+              >Cross Platform Messaging</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforpassprotection()"
+              >Password Protection</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforencryption()"
+              >End to End Encryption</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforscheduling()"
+              >Meeting Scheduling</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforassignpermission()"
+              >Assign Permission Setting</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a class="services" routerLink="" (mouseover)="toggleforreminder()"
+              >Meeting Reminder</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="togglefortranscription()"
+              >Meeting Transcripting</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforbreakoutrooms()"
+              >Breakout Rooms</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforscreensharing()"
+              >Screen Sharing</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforwhiteboarding()"
+              >Whiteboarding</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a
+              class="services"
+              routerLink=""
+              (mouseover)="toggleforfilesharing()"
+              >File Sharing</a
+            >
+          </li>
+          <li style="padding: 1%">
+            <a class="services" routerLink="" (mouseover)="toggleformessaging()"
+              >Instant Messaging</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6" style="padding-top: 20px; padding-bottom: 50px">
+        <div class="w3-card description" *ngIf="hiddenforvirtualbackground">
+          <h2>Virtual Background</h2>
+          <p>
+            <span class="mirror">Mirror</span> has the ability to replace the
+            space behind you with an image of your choice, no green screen
+            required. It works for desktop users and Android users, but ios
+            users are out of luck. The hardware requirements are a bit high, but
+            those who don’t meet them can still use virtual backgrounds, though
+            performance will vary.
+            <br />
+            <br />
+            This is a great feature for those working from home who don’t have
+            dedicated office space or, like me, tend to let their workspace get
+            a bit cluttered. It’s easy to toggle it on or off and adding a
+            personal background is as easy as making a couple clicks.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforcrossplatform">
+          <h2>Cross Platform Messaging</h2>
+          <p></p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforpassprotection">
+          <h2>Password Protection</h2>
+          <p>
+            To make sure that only people you want to be in meetings can access
+            them, <span class="mirror">Mirror</span> meetings now have passwords
+            as standard.
+            <br />
+            Previously scheduled meetings (including those scheduled via your
+            Personal Meeting ID) will have passwords enabled. So you can't now
+            just join a meeting with the Meeting ID - you need the password
+            number as well.
+            <br />
+            <br />
+            For meetings scheduled from now on, the meeting password can be
+            found in the invitation. And if you create an instant meeting (an
+            impromptu meet without an invitation), the password will be shown in
+            the Zoom client in case you want others to join.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforencryption">
+          <h2>End to End Encryption</h2>
+          <p>
+            End-to-end (E2EE) encryption for meetings is now available on
+            <span class="mirror">Mirror</span>.
+            <br />
+            Account owners and admins can enable end-to-end encryption for
+            meetings, providing additional protection when needed.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforscheduling">
+          <h2>Meeting Scheduling</h2>
+          <p>
+            <span class="mirror">Mirror</span> allows you to schedule meetings
+            ahead of time and share the meeting information with participants.
+            <br />
+            Depending on how you set them up, scheduled meetings may occur
+            either in your Personal Meeting Room or a unique location.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforassignpermission">
+          <h2>Assign Permission</h2>
+          <p>
+            Host controls allow you as the host to control various aspects of a
+            <span class="mirror">Mirror</span> meeting, such as managing the
+            participants. The co-host feature allows the host to share hosting
+            privileges with another user, allowing the co-host to manage the
+            administrative side of the meeting, such as managing participants or
+            starting/stopping the recording. The host must assign a co-host.
+            There is no limitation on the number of co-hosts you can have in a
+            meeting or webinar.
+            <br />
+            Co-hosts do not have access to Start live streaming, End meeting for
+            all participants, Make another participant a co-host.
+            <br />
+            Co-hosts also cannot start a meeting. If a host needs someone else
+            to be able to start the meeting, they can assign an alternative
+            host.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforreminder">
+          <h2>Meeting Reminder</h2>
+          <p></p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenfortranscription">
+          <h2>Meeting Transcripting</h2>
+          <p style="margin-bottom: 10%">
+            <span class="mirror">Mirror</span>'s meeting recording features are
+            great—all an organizer has to do to capture video of a Zoom meeting
+            is click a few buttons and you’ll have a record of everything that
+            happens.
+            <br />
+            For users with a <span class="mirror">Mirror</span> Business,
+            Education, or Enterprise account, meeting recording is even more
+            useful; <span class="mirror">Mirror</span> can automatically
+            transcribe meeting recordings uploaded to the cloud. Automatic
+            meeting transcription has to be turned on by a
+            <span class="mirror">Mirror</span> administrator, so be sure
+            everything is set up properly before starting a meeting you want to
+            transcribe and record.
+            <br />
+            This can be a huge advantage for remote workers that have technical
+            difficulties, need to miss a meeting, or want to be able to refer
+            back to what was said without having to scroll through a video to
+            find the right moment.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforbreakoutrooms">
+          <h2>Breakout Rooms</h2>
+          <p
+            style="
+              margin-left: 5%;
+              margin-right: 5%;
+              margin-bottom: 10%;
+              margin-top: 0%;
+            "
+          >
+            Breakout rooms are like mini
+            <span class="mirror">Mirror</span> meetings within your main Zoom
+            meeting. They are a great tool to use when attendees need to
+            participate in small-group activities and discussions.
+            <br />
+            Breakout Room features:
+            <br />
+            <span>1. </span>The host and co-hosts of a
+            <span class="mirror">Mirror</span> meeting can set up, re-organize,
+            and close breakout rooms at any point during a meeting.
+            <br />
+            <span>2. </span>Participants can be split up into rooms
+            automatically (random) or manually. With a recent
+            <span class="mirror">Mirror</span> update, participants can also be
+            allowed to self-select their own breakout rooms!
+            <br />
+            <span>3. </span>The host and co-hosts can join and leave individual
+            breakout rooms whenever they want.
+            <br />
+            <span>4. </span>The host can broadcast messages to all of the
+            breakout rooms at once.
+            <br />
+            <span>5. </span>Participants can invite the host to join their
+            breakout room if they need help.
+            <br />
+            <span>6. </span>Breakout rooms can be configured to close
+            automatically after a set period of time.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforscreensharing">
+          <h2>Screen Sharing</h2>
+          <p>
+            You can share your screen, desktop or other content with meeting
+            participants or webinar attendees on
+            <span class="mirror">Mirror</span>.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforwhiteboarding">
+          <h2>Whiteboarding</h2>
+          <p>
+            There’s no better visual way to express your ideas than by writing
+            them on a whiteboard. Whiteboards make it easy to express your
+            ideas, collaborate on designs, and teach people new concepts during
+            meetings.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenforfilesharing">
+          <h2>File Sharing</h2>
+          <p>
+            <span class="mirror">Mirror</span> enables End-to-end encryption
+            with zero-knowledge standards with EU Data Centers.
+            <span class="mirror">Mirror</span> makes secure file exchange easy
+            and affordable for your business.
+          </p>
+        </div>
+
+        <div class="w3-card description" *ngIf="hiddenformessaging">
+          <h2>Instant Messaging</h2>
+          <p>
+            For chat (instant messaging), chat allows for a secured
+            communication where only the intended recipient(s) can read the
+            secured message.
+            <br />
+            <span class="mirror">Mirror</span> uses a combination of asymmetric
+            (public-private key) and symmetric (shared session key) encryption
+            to protect the chat sessions.
+            <br />
+            <span class="mirror">Mirror</span> uses device-level authentication
+            to ensure messages can only be read by the intended recipient on an
+            authorized device.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="row" style="margin: 50px">
+          <div class="col-3" style="text-align: center">
+            <span
+              ><a
+                routerLink=""
+                style="text-decoration: none; color: white; font-size: large"
+                >About</a
+              ></span
+            >
+          </div>
+          <div class="col-3" style="text-align: center">
+            <span
+              ><a
+                routerLink=""
+                style="text-decoration: none; color: white; font-size: large"
+                >Download</a
+              ></span
+            >
+          </div>
+          <div class="col-3" style="text-align: center">
+            <span
+              ><a
+                routerLink=""
+                style="text-decoration: none; color: white; font-size: large"
+                >Support</a
+              ></span
+            >
+          </div>
+          <div class="col-3" style="text-align: center">
+            <span
+              ><a
+                routerLink=""
+                style="text-decoration: none; color: white; font-size: large"
+                >Language</a
+              ></span
+            >
+            <br />
+            <mat-form-field>
+              <mat-select>
+                <mat-option value="English" selected="selected"
+                  >English</mat-option
+                >
+                <mat-option value="Hindi">Hindi</mat-option>
+                <mat-option value="">XYZ</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

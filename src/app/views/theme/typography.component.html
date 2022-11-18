@@ -1,0 +1,158 @@
+<div class="animated fadeIn">
+  <div class="card">
+   
+    <div class="card-body">
+      <h1>Meetings</h1>
+      <mat-tab-group [(selectedIndex)]="tab">
+        <mat-tab label="Previous Meetings">
+
+          <div style="overflow: hidden;" *ngFor="let m of meetData;" >
+
+<div *ngIf="checkDate(m.time_slot);" class="mt-5" >
+
+  <div class="jumbotron p-2" >
+    <h3 class="m-0">{{m.time_slot| date:'EEEE d, MMM, y'}}</h3>
+  </div>
+
+  <div class="row p-2" >
+    <div class="col-2" >
+      <h2>{{m.time_slot | date:'shortTime'}}-{{m.duration | date:'shortTime'}}</h2>
+    </div>
+    <div class="col-7" >
+      <h2>{{m.topic}}</h2>
+    </div>
+    <div class="col-3" >
+      <div style="display: flex;"  > 
+      <button mat-raised-button color="primary" class="mr-2" (click)="startMeet(m.topic)">Start</button>
+      <button mat-raised-button style="background-color:#4CAF50; color:white" class="mr-2" (click)="Edit(m.id)">Edit</button>
+      <button mat-raised-button color="warn" (click)="deleteMeet(m.id)">Delete</button>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+            
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Upcoming Meeting">
+
+          <div  style="overflow: hidden;" *ngFor="let m of meetData;" >
+
+            <div *ngIf="checkDate(m.time_slot)==false" class="mt-5">
+            
+              <div class="jumbotron p-2"  >
+                <h3 class="m-0">{{m.time_slot| date:'EEEE, MMM d, y'}}</h3>
+              </div>
+            
+              <div class="row p-2" >
+                <div class="col-2">
+                  <h2>{{m.time_slot | date:'shortTime'}}-{{m.duration | date:'shortTime'}}</h2>
+                </div>
+                <div class="col-7">
+                  <h2>{{m.topic}}</h2>
+                </div>
+                <div class="col-3" >
+                  <div style="display: flex;"  > 
+                  <button mat-raised-button color="primary" class="mr-2" >Start</button>
+                  <button mat-raised-button style="background-color:#4CAF50; color:white" class="mr-2" (click)="Edit(m.id)">Edit</button>
+                  <button mat-raised-button color="warn" (click)="deleteMeet(m.id)">Delete</button>
+                </div>
+                </div>
+              </div>
+            
+            </div>
+            
+                        
+                      </div>
+        </mat-tab>
+
+        <mat-tab label="Schedule Meeting"> <div class="container mt-5">
+          <form  [formGroup]="meetingData" (ngSubmit)="onSubmit();meetingData.reset();">
+            <div class="form-group row">
+              <label for="topic" class="col-2 col-form-label" >Topic</label>
+              <div class="col-5">
+                <input type="text" class="form-control" id="topic" formControlName="topic">
+              </div>
+            </div>
+            <!-- <div class="row mt-4">
+              <div class="col-2"></div>
+              <div class="col-5">
+                <h2 class="text-primary" (click)="add()" *ngIf="show" style="cursor: pointer">
+                  <i class="bi bi-plus"></i>Add Description
+                </h2>
+                <textarea type="text" class="form-control" placeholder="Add Description" *ngIf="!show"></textarea>
+              </div>
+            </div> -->
+  
+            <div class="row mt-4 form-group">
+              <label class="col-2 col-form-label">Time&nbsp;Slot</label>
+              <div class="col-5">
+                <input type="date" class="form-control form-check-inline" style="width: 150px" formControlName="date">
+                <input class="form-control form-check-inline" style="width: 150px" type="time" formControlName="time">
+              </div>
+            </div>
+  
+            <div class="row mt-4">
+              <label class="col-2 col-form-label">Duration</label>
+              <div class="col-5">
+                <mat-form-field appearance="outline" class="w-25" >
+                  <mat-select formControlName="hour">
+                    <mat-option *ngFor="let h of hour" [value]="h">{{
+                      h
+                      }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <span style="margin-left: 10px; margin-right: 10px">hr</span>
+                <mat-form-field appearance="outline" class="w-25" >
+                  <mat-select formControlName="min">
+                    <mat-option *ngFor="let m of min" [value]="m" >{{
+                      m
+                      }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <span style="margin-left: 10px">min</span>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-2">
+                <label>Time&nbsp;Zone</label>
+              </div>
+              <div class="col-5">
+                <mat-form-field appearance="outline" class="w-100" >
+                  <mat-select formControlName="time_zone">
+                    <mat-option *ngFor="let tz of timezone" [value]="tz" >{{
+                      tz
+                      }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+  
+            <!-- <div class="form-group row">
+              <label class="col-2 col-form-label" for="typeNumber">Allow&nbsp;Participants</label>
+              <div class="col-2">
+                <input type="number" id="typeNumber" class="form-control" />
+              </div>
+            </div> -->
+            <button *ngIf="edit==false" mat-raised-button class="rounded-pill p-2 mx-auto" style="
+                          background-color: #aad3d5df;
+                          color: white;
+                          font-size: 20px;
+                        " >
+             Save
+            </button>
+
+          </form>
+          <button mat-raised-button color="primary" class="mr-2" *ngIf="edit" (click)="doEdit()">Edit</button>
+          
+        </div>
+       </mat-tab>
+      </mat-tab-group>
+      
+    </div>
+  
+  </div>
+</div>
