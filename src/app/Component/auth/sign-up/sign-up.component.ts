@@ -16,12 +16,13 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  SignUp(name,email,pwd){
-    this.serv.signup(name,email,pwd).subscribe((data)=>{
-      console.log(data)
-      alert("Signup Successful")
-      this.router.navigate(['login-form'])
-    })
-  }
+  
+  // SignUp(name,email,pwd){
+  //   this.serv.signup(name,email,pwd).subscribe((data)=>{
+  //     console.log(data)
+  //     alert("Signup Successful")
+  //     this.router.navigate(['login-form'])
+  //   })
+  // }
 }
 

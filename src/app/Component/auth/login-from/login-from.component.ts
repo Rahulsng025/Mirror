@@ -13,20 +13,11 @@ export class LoginFromComponent implements OnInit {
 
   constructor(public authService: AuthenticateService,
     private router: Router,
-    private loginserv:LoginServiceService,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder
+ ) { }
 
   ngOnInit(): void {
   }
 
-  login(email,pass){
-
-    this.loginserv.login(email,pass).subscribe((data:any)=>{
-      
-      const token=data.success.token;
-       localStorage.setItem('token',token);
-      this.router.navigate(['dashboard'])
-    })
-  }
 
 }
